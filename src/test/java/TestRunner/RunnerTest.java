@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features = { "src/test/java/Features" }, glue = "Steps", dryRun = false, monochrome = true
+		features = { "src/test/java/Features" }, glue = "Steps", dryRun = true, monochrome = true
 
 )
 public class RunnerTest {
