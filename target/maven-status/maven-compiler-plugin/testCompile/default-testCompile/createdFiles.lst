@@ -1,2 +1,3 @@
 TestRunner\RunnerTest.class
 Steps\LoginPageTestStep.class
+Steps\HomePageTestStep.class

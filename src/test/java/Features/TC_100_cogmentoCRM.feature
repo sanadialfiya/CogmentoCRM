@@ -9,3 +9,8 @@ Feature: Test Cogmneto Application
     Given when user is on home page and verify home page title
     Then user validate the Home page logo
     And user validate home page url
+
+  Scenario: validate contact page functionality
+    When user click on contact link and click on create button
+    Then user enter firstname and lastname
+    And click on save button

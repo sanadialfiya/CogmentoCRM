@@ -1,3 +1,4 @@
+PageLayer\HomePage.class
 BaseLayer\BaseClass.class
 PageLayer\LoginPage.class
 Utility\Wait.class
