@@ -7,47 +7,52 @@ import org.openqa.selenium.support.PageFactory;
 import BaseLayer.BaseClass;
 import Utility.Wait;
 
-public class ContactPage extends BaseClass
-{
-	
-	@FindBy(xpath="//a[@href='/contacts']")
+public class ContactPage extends BaseClass {
+
+	@FindBy(xpath = "//a[@href='/contacts']")
 	private WebElement contactLink;
-	
-	@FindBy(xpath="//button[text()='Create']")
+
+	@FindBy(xpath = "//button[text()='Create']")
 	private WebElement createButton;
-	
-	@FindBy(name="first_name")
+
+	@FindBy(name = "first_name")
 	private WebElement firstName;
-	
-	@FindBy(name="last_name")
+
+	@FindBy(name = "last_name")
 	private WebElement lastName;
-	
-	@FindBy(xpath="//button[text()='Save']")
+
+	@FindBy(xpath = "//button[text()='Save']")
 	private WebElement saveButton;
-	
-	
-	public ContactPage()
-	{
+
+	@FindBy(xpath = "//i[@class='trash icon']")
+	private WebElement deleteButton;
+
+	@FindBy(xpath = "//button[text()='Delete']")
+	private WebElement deleteConfirm;
+
+	public ContactPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void clickOnContactAndCreate()
-	{
+
+	public void clickOnContactAndCreate() {
 		Wait.click(contactLink);
 		Wait.click(createButton);
 	}
-	
-	public void enterFirstnameAndLastname(String fname,String lname)
-	{
+
+	public void enterFirstnameAndLastname(String fname, String lname) {
 		Wait.sendKeys(firstName, fname);
 		Wait.sendKeys(lastName, lname);
 	}
-	
-	public void clickOnSave()
-	{
+
+	public void clickOnSave() {
 		Wait.click(saveButton);
 	}
+
+	public void clickOnDeleteIcon() {
+		Wait.click(deleteButton);
+	}
+
+	public void clickOnDeleteConfirmButton() {
+		Wait.click(deleteConfirm);
+	}
 }
-
-
-

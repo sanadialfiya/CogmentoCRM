@@ -14,3 +14,7 @@ Feature: Test Cogmneto Application
     When user click on contact link and click on create button
     Then user enter firstname and lastname
     And click on save button
+
+  Scenario: validate delete contact  page functionality
+    When user click on delete icon
+    And user click on delete confirm messgae button
