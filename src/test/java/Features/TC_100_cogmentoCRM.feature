@@ -18,3 +18,8 @@ Feature: Test Cogmneto Application
   Scenario: validate delete contact  page functionality
     When user click on delete icon
     And user click on delete confirm messgae button
+
+  Scenario: valiate company page functionality
+    When user click on companies link and click on create button
+    And user enter company name and click on save
+    Then user click on delete button and click on confirm delete
